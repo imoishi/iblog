@@ -14,11 +14,26 @@ class SiteController extends Controller
      */
     public function index()
     {
-        $posts = Post::where('status', 1)->latest()->get();
+        $posts = Post::where('status', 1)->latest()->paginate(12);
 
 //        dd($posts);
 
         return view('frontend.home.index', compact('posts'));
+    }
+
+
+//    public function showSinglePost($id)
+//    {
+//        $post = Post::find($id);
+//
+////        dd($post);
+//        return view('frontend.post.single', compact('post'));
+//    }
+
+    public function showSinglePost(Post $post)
+    {
+//        dd($post);
+        return view('frontend.post.single', compact('post'));
     }
 
     /**

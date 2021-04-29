@@ -21,6 +21,11 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="{{route('frontend.index')}}">Home <span class="sr-only">(current)</span></a>
                     </li>
+                    @foreach($categories as $category)
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">{{$category->name}}</a>
+                    </li>
+                    @endforeach
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('frontend.about')}}">About</a>
                     </li>

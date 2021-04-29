@@ -12,16 +12,21 @@
                 @foreach($posts as $post)
                 <div class="col-md-3 ">
                     <div class="card">
-                        <img src="{{asset('/')}}assets/frontend/images/s2.jpg" class="card-img-top" alt="...">
+                        <img src="{{$post->img_url}}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">{{$post->name}}</h5>
-                            <p class="card-text">{{$post->body}}</p>
+
+                            <a href="{{route('frontend.posts.show', $post->id)}}"><h5 class="card-title">{{$post->name}}</h5></a>
+{{--                            <a href="{{url('/posts', $post->id)}}"><h5 class="card-title">{{$post->name}}</h5></a>--}}
+
+                            <p class="card-text">{!! substr(strip_tags($post->body),0,70)."..." !!}</p>
                             <small class="float-left">12 hour</small>
                         </div>
                     </div>
                 </div>
                 @endforeach
-
+            </div>
+            <div class="row d-flex justify-content-center pt-5">
+                {{$posts->links()}}
             </div>
         </div>
     </div>
