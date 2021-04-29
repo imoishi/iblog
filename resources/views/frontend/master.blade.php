@@ -102,6 +102,8 @@
 <!--//MENU-JS-->
 <script src="{{asset('/')}}assets/frontend/js/bootstrap.min.js"></script>
 
+@stack('script')
+
 </body>
 
 </html>

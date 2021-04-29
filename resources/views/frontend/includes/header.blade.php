@@ -22,10 +22,10 @@
                         <a class="nav-link" href="{{route('frontend.index')}}">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
+                        <a class="nav-link" href="{{route('frontend.about')}}">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="services.html">Services</a>
+                        <a class="nav-link" href="{{route('frontend.services')}}">Services</a>
                     </li>
 
                     <li class="nav-item mr-lg-5">
