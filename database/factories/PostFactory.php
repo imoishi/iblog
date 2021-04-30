@@ -10,7 +10,7 @@ $factory->define(Post::class, function (Faker $faker) {
         'name' => $faker->sentence,
         'body' => $faker->text(600),
         'img_url' => $faker->imageUrl(640, 480),
-        'category_id' => mt_rand(1, 10),
+        'category_id' => mt_rand(1, 6),
         'user_id' => mt_rand(1, 25),
     ];
 });

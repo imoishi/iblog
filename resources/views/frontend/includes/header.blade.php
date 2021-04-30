@@ -23,33 +23,19 @@
                     </li>
                     @foreach($categories as $category)
                     <li class="nav-item">
-                        <a class="nav-link" href="#">{{$category->name}}</a>
+                        <a class="nav-link" href="{{route('frontend.category.posts.show', $category->id)}}">{{$category->name}}</a>
                     </li>
                     @endforeach
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('frontend.about')}}">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('frontend.services')}}">Services</a>
-                    </li>
+{{--                    <li class="nav-item">--}}
+{{--                        <a class="nav-link" href="{{route('frontend.about')}}">About</a>--}}
+{{--                    </li>--}}
+{{--                    <li class="nav-item">--}}
+{{--                        <a class="nav-link" href="{{route('frontend.services')}}">Services</a>--}}
+{{--                    </li>--}}
 
-                    <li class="nav-item mr-lg-5">
-                        <a class="nav-link" href="{{route('frontend.contact')}}">Contact</a>
-                    </li>
-                    <!--//search-right-->
-                    <div class="search-right ml-xl-5 mr-xl-0 mr-lg-3 ">
-                        <!--/search-form-->
-                        <form action="#" method="GET" class="search-box position-relative">
-                            <div class="input-search">
-                                <input type="search" placeholder="Enter Keyword" name="search" required="required" autofocus=""
-                                       class="search-popup">
-
-                                <button type="submit" class="btn search-btn"><i class="fa fa-search" aria-hidden="true"></i></button>
-                            </div>
-                        </form>
-                        <!--//search-form-->
-                    </div>
-                    <!--/search-right-->
+{{--                    <li class="nav-item mr-lg-5">--}}
+{{--                        <a class="nav-link" href="{{route('frontend.contact')}}">Contact</a>--}}
+{{--                    </li>--}}
                 </ul>
             </div>
             <!-- toggle switch for light and dark theme -->

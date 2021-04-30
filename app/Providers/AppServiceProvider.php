@@ -27,7 +27,8 @@ class AppServiceProvider extends ServiceProvider
     {
         // Using class based composers...
         View::composer('frontend.includes.header', function ($view) {
-            $categories = Category::where('status', 1)->take(3)->get();
+            $categories = Category::where('status', 1)->take(6)->get();
+//            dd($categories);
            $view->with('categories', $categories);
         });
 

@@ -25,10 +25,10 @@ class DatabaseSeeder extends Seeder
         Post::truncate();
 
         factory(User::class, 50)->create();
-        factory(Category::class, 50)->create();
+        factory(Category::class, 6)->create();
         factory(Tag::class, 50)->create();
 
-        $posts = factory(Post::class, 50)->create()->each(function ($post) {
+        $posts = factory(Post::class, 250)->create()->each(function ($post) {
            $tags = Tag::get()->random(mt_rand(1, 3))->pluck('id');
            $post->tags()->sync($tags);
         });

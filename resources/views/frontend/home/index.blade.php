@@ -20,6 +20,7 @@
 
                             <p class="card-text">{!! substr(strip_tags($post->body),0,70)."..." !!}</p>
                             <small class="float-left">12 hour</small>
+                            <small class="float-right">{{$post->category->name}}</small>
                         </div>
                     </div>
                 </div>
